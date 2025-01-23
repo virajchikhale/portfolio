@@ -19,7 +19,7 @@ st.markdown(
 st.markdown('<h1 class="title">My Projects</h1>', unsafe_allow_html=True)
 st.subheader("", divider=True)
 
-col1, col2, col3, col4 = st.columns([1,4,4,1], gap="medium", vertical_alignment="center")
+col1, col2, col3, col4 = st.columns([1,4,4,1], gap="medium", vertical_alignment="top")
 with col1:
     st.write( )
 
