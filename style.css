@@ -724,6 +724,9 @@ section {
 .orbit-1 { width: 200px; height: 200px; }
 .orbit-2 { width: 260px; height: 260px; animation-duration: 20s; }
 .orbit-3 { width: 320px; height: 320px; animation-duration: 25s; }
+.orbit-4 { width: 380px; height: 380px; animation-duration: 30s; }
+.orbit-5 { width: 440px; height: 440px; animation-duration: 35s; }
+.orbit-6 { width: 500px; height: 500px; animation-duration: 40s; }
 
 .planet {
     position: absolute;
@@ -737,10 +740,39 @@ section {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
 }
+/* === Hero Avatar Planets – unique positions === */
+.planet-1 {       /* 12 o’clock */
+    top:   -15px;
+    left:  50%;
+    transform: translateX(-50%);
+}
 
-.planet-1 { top: -15px; left: calc(50% - 15px); }
-.planet-2 { top: calc(50% - 15px); right: -15px; }
-.planet-3 { bottom: -15px; left: calc(50% - 15px); }
+.planet-2 {       /* 2 o’clock */
+    top:   15%;
+    right: 5px;
+}
+
+.planet-3 {       /* 4 o’clock */
+    bottom: 25%;
+    right:  -5px;
+}
+
+.planet-4 {       /* 6 o’clock */
+    bottom: -15px;
+    left:   50%;
+    transform: translateX(-50%);
+}
+
+.planet-5 {       /* 8 o’clock */
+    bottom: 25%;
+    left:   10px;
+}
+
+.planet-6 {       /* 10 o’clock */
+    top:   15%;
+    left:  40px;
+}
+
 
 @keyframes rotate {
     from { transform: rotate(0deg); }
