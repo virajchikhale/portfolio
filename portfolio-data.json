@@ -1,0 +1,118 @@
+{
+  "navigation": [
+    { "href": "#home", "label": "Home" },
+    { "href": "#about", "label": "About" },
+    { "href": "#technologies", "label": "Tech" },
+    { "href": "#projects", "label": "Projects" },
+    { "href": "#services", "label": "Services" },
+    { "href": "#experience", "label": "Experience" },
+    { "href": "#contact", "label": "Contact" }
+  ],
+  "personal": {
+    "name": "Viraj Chikhale",
+    "subtitle": "Full Stack Developer & Digital Universe Explorer",
+    "bio": "Welcome to my digital dimension! I'm a passionate full-stack developer who transforms ideas into stellar web experiences. With expertise spanning modern frameworks, cloud technologies, and creative problem-solving, I craft solutions that are both technically robust and visually captivating."
+  },
+  "skills": [
+    { "name": "JavaScript", "level": 95, "icon": "🟨" },
+    { "name": "React", "level": 90, "icon": "⚛️" },
+    { "name": "Node.js", "level": 88, "icon": "🟢" },
+    { "name": "Python", "level": 85, "icon": "🐍" },
+    { "name": "TypeScript", "level": 87, "icon": "🔷" },
+    { "name": "MongoDB", "level": 82, "icon": "🍃" },
+    { "name": "AWS", "level": 80, "icon": "☁️" },
+    { "name": "Docker", "level": 78, "icon": "🐳" }
+  ],
+  "technologies": {
+    "Frontend": ["React", "Vue.js", "Angular", "Next.js", "Svelte", "TypeScript"],
+    "Backend": ["Node.js", "Python", "Express", "Django", "FastAPI", "GraphQL"],
+    "Database": ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Elasticsearch"],
+    "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Jenkins"],
+    "Mobile": ["React Native", "Flutter", "Ionic", "PWA"],
+    "Tools": ["Git", "Webpack", "Vite", "Jest", "Cypress", "Figma"]
+  },
+  "projects": [
+    {
+      "title": "Quantum E-Commerce Platform",
+      "type": "Web Application",
+      "description": "A next-generation e-commerce platform with AI-powered recommendations and real-time analytics.",
+      "technologies": ["React", "Node.js", "MongoDB", "AWS", "Stripe"],
+      "demoUrl": "https://demo.example.com",
+      "githubUrl": "https://github.com/example"
+    },
+    {
+      "title": "Stellar Task Manager",
+      "type": "SaaS Platform",
+      "description": "A collaborative project management tool with advanced scheduling and team coordination features.",
+      "technologies": ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
+      "demoUrl": "https://demo.example.com",
+      "githubUrl": "https://github.com/example"
+    },
+    {
+      "title": "Cosmic Data Visualizer",
+      "type": "Data Analytics",
+      "description": "Interactive dashboard for complex data visualization with real-time updates and custom charts.",
+      "technologies": ["D3.js", "Python", "Flask", "Redis", "WebSocket"],
+      "demoUrl": "https://demo.example.com",
+      "githubUrl": "https://github.com/example"
+    }
+  ],
+  "services": [
+    {
+      "icon": "💻",
+      "title": "Full Stack Development",
+      "description": "End-to-end web application development with modern technologies and best practices."
+    },
+    {
+      "icon": "🎨",
+      "title": "UI/UX Design",
+      "description": "Creating intuitive and visually appealing user interfaces that enhance user experience."
+    },
+    {
+      "icon": "☁️",
+      "title": "Cloud Solutions",
+      "description": "Scalable cloud architecture design and implementation for optimal performance."
+    },
+    {
+      "icon": "📱",
+      "title": "Mobile Development",
+      "description": "Cross-platform mobile applications with native performance and modern features."
+    }
+  ],
+  "experience": [
+    {
+      "company": "Cosmic Web Solutions",
+      "position": "Senior Full Stack Developer",
+      "location": "Digital Universe",
+      "startDate": "2023",
+      "endDate": "Present",
+      "description": "Leading development of next-generation web applications with cutting-edge technologies.",
+      "achievements": [
+        "Architected scalable microservices handling 10M+ requests daily",
+        "Reduced application load time by 60% through optimization",
+        "Led team of 5 developers on mission-critical projects"
+      ]
+    },
+    {
+      "company": "StarTech Industries",
+      "position": "Frontend Developer",
+      "location": "Tech Galaxy",
+      "startDate": "2021",
+      "endDate": "2023",
+      "description": "Specialized in creating responsive, user-friendly web interfaces.",
+      "achievements": [
+        "Developed 15+ production web applications",
+        "Improved user engagement by 40% through UX enhancements",
+        "Implemented automated testing reducing bugs by 70%"
+      ]
+    }
+  ],
+  "contact": {
+    "form_fields": [
+      { "name": "name", "label": "Name", "type": "text", "required": true },
+      { "name": "email", "label": "Email", "type": "email", "required": true },
+      { "name": "subject", "label": "Subject", "type": "text", "required": true },
+      { "name": "message", "label": "Message", "type": "textarea", "required": true }
+    ]
+  }
+}
