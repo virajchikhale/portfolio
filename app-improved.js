@@ -379,25 +379,25 @@ function initializeTerminal() {
     const commands = [
         {
             command: 'whoami',
-            output: ['alex-cosmic'],
+            output: ['viraj-chikhalee'],
             delay: 0
         },
         {
             command: 'pwd',
-            output: ['/home/alex-cosmic/projects/portfolio'],
+            output: ['/home/viraj-chikhale/projects/portfolio'],
             delay: 100
         },
         {
             command: 'ls -la',
             output: [
                 'total 256',
-                'drwxr-xr-x  8 alex-cosmic staff   256 Jul 26 13:23 .',
-                'drwxr-xr-x  3 alex-cosmic staff    96 Jul 26 13:23 ..',
-                '-rw-r--r--  1 alex-cosmic staff  2048 Jul 26 13:23 .gitignore',
-                // '-rw-r--r--  1 alex-cosmic staff  4096 Jul 26 13:23 README.md',
-                // 'drwxr-xr-x  5 alex-cosmic staff   160 Jul 26 13:23 src/',
-                // 'drwxr-xr-x  3 alex-cosmic staff    96 Jul 26 13:23 assets/',
-                // '-rw-r--r--  1 alex-cosmic staff  1024 Jul 26 13:23 package.json'
+                'drwxr-xr-x  8 viraj-chikhale staff   256 Jul 26 13:23 .',
+                'drwxr-xr-x  3 viraj-chikhale staff    96 Jul 26 13:23 ..',
+                '-rw-r--r--  1 viraj-chikhale staff  2048 Jul 26 13:23 .gitignore',
+                // '-rw-r--r--  1 viraj-chikhale staff  4096 Jul 26 13:23 README.md',
+                // 'drwxr-xr-x  5 viraj-chikhale staff   160 Jul 26 13:23 src/',
+                // 'drwxr-xr-x  3 viraj-chikhale staff    96 Jul 26 13:23 assets/',
+                // '-rw-r--r--  1 viraj-chikhale staff  1024 Jul 26 13:23 package.json'
             ],
             delay: 200
         },
@@ -427,7 +427,7 @@ function initializeTerminal() {
         
         const prompt = document.createElement('span');
         prompt.className = 'terminal-prompt';
-        prompt.textContent = 'alex-cosmic@portfolio:~$ ';
+        prompt.textContent = 'viraj-chikhale@portfolio:~$ ';
         
         const commandSpan = document.createElement('span');
         commandSpan.className = 'terminal-command';
@@ -492,7 +492,7 @@ function initializeTerminal() {
             const finalLine = document.createElement('div');
             finalLine.className = 'terminal-line';
             finalLine.innerHTML = `
-                <span class="terminal-prompt">alex-cosmic@portfolio:~$ </span>
+                <span class="terminal-prompt">viraj-chikhale@portfolio:~$ </span>
                 <span class="cursor">█</span>
             `;
             terminalBody.appendChild(finalLine);
@@ -554,14 +554,16 @@ function enhanceContactTerminal() {
     const contactTerminal = document.querySelector('.contact .terminal-screen');
     if (!contactTerminal) return;
 
-    // Add system monitoring
-    const monitoringData = [
-        { label: 'CPU Usage', value: '23%', status: 'success' },
-        { label: 'Memory', value: '4.2GB / 16GB', status: 'info' },
-        { label: 'Network', value: '↑ 125 KB/s ↓ 2.1 MB/s', status: 'success' },
-        { label: 'Disk I/O', value: '45 MB/s', status: 'warning' }
-    ];
+    // System monitoring values with animation targets
+    const monitoringValues = {
+        cpu: { current: 23, target: 23, min: 15, max: 75 },
+        memory: { current: 4.2, target: 4.2, min: 2, max: 10 },
+        networkUp: { current: 125, target: 125, min: 50, max: 550 },
+        networkDown: { current: 2.1, target: 2.1, min: 0.5, max: 5.5 },
+        diskIO: { current: 45, target: 45, min: 20, max: 120 }
+    };
 
+    // Create monitoring section with initial values
     const monitoringSection = document.createElement('div');
     monitoringSection.className = 'system-monitoring';
     monitoringSection.innerHTML = `
@@ -569,19 +571,112 @@ function enhanceContactTerminal() {
             <span class="status-indicator status-success"></span>
             System Status
         </div>
-        ${monitoringData.map(item => `
-            <div class="monitoring-item">
-                <span class="monitoring-label">${item.label}:</span>
-                <span class="monitoring-value status-${item.status}">${item.value}</span>
-            </div>
-        `).join('')}
+        <div class="monitoring-item">
+            <span class="monitoring-label">CPU Usage:</span>
+            <span class="monitoring-value status-success" data-type="cpu">23%</span>
+        </div>
+        <div class="monitoring-item">
+            <span class="monitoring-label">Memory:</span>
+            <span class="monitoring-value status-info" data-type="memory">4.2GB / 16GB</span>
+        </div>
+        <div class="monitoring-item">
+            <span class="monitoring-label">Network:</span>
+            <span class="monitoring-value status-success" data-type="network">↑ 125 KB/s ↓ 2.1 MB/s</span>
+        </div>
+        <div class="monitoring-item">
+            <span class="monitoring-label">Disk I/O:</span>
+            <span class="monitoring-value status-warning" data-type="disk">45 MB/s</span>
+        </div>
     `;
 
-    const screenContent = contactTerminal.querySelector('.screen-content');
-    if (screenContent) {
-        screenContent.appendChild(monitoringSection);
+    // Add to terminal
+    const screenContent = contactTerminal.querySelector('.screen-content') || contactTerminal;
+    screenContent.appendChild(monitoringSection);
+
+    // Initialize animation system
+    initSystemAnimation();
+
+    function initSystemAnimation() {
+        // Generate new target values every 3-5 seconds
+        const targetUpdateInterval = setInterval(() => {
+            monitoringValues.cpu.target = Math.random() * (monitoringValues.cpu.max - monitoringValues.cpu.min) + monitoringValues.cpu.min;
+            monitoringValues.memory.target = Math.random() * (monitoringValues.memory.max - monitoringValues.memory.min) + monitoringValues.memory.min;
+            monitoringValues.networkUp.target = Math.random() * (monitoringValues.networkUp.max - monitoringValues.networkUp.min) + monitoringValues.networkUp.min;
+            monitoringValues.networkDown.target = Math.random() * (monitoringValues.networkDown.max - monitoringValues.networkDown.min) + monitoringValues.networkDown.min;
+            monitoringValues.diskIO.target = Math.random() * (monitoringValues.diskIO.max - monitoringValues.diskIO.min) + monitoringValues.diskIO.min;
+        }, Math.random() * 2000 + 3000); // 3-5 seconds
+
+        // Smooth value interpolation
+        function updateValues() {
+            const elements = {
+                cpu: monitoringSection.querySelector('[data-type="cpu"]'),
+                memory: monitoringSection.querySelector('[data-type="memory"]'),
+                network: monitoringSection.querySelector('[data-type="network"]'),
+                disk: monitoringSection.querySelector('[data-type="disk"]')
+            };
+
+            // CPU Animation
+            if (elements.cpu) {
+                const cpuDiff = monitoringValues.cpu.target - monitoringValues.cpu.current;
+                if (Math.abs(cpuDiff) > 0.1) {
+                    monitoringValues.cpu.current += cpuDiff * 0.02;
+                    elements.cpu.textContent = `${monitoringValues.cpu.current.toFixed(0)}%`;
+                    
+                    // Update status color based on CPU usage
+                    elements.cpu.className = 'monitoring-value';
+                    if (monitoringValues.cpu.current > 70) {
+                        elements.cpu.classList.add('status-warning');
+                    } else if (monitoringValues.cpu.current > 90) {
+                        elements.cpu.classList.add('status-danger');
+                    } else {
+                        elements.cpu.classList.add('status-success');
+                    }
+                }
+            }
+
+            // Memory Animation
+            if (elements.memory) {
+                const memDiff = monitoringValues.memory.target - monitoringValues.memory.current;
+                if (Math.abs(memDiff) > 0.01) {
+                    monitoringValues.memory.current += memDiff * 0.02;
+                    elements.memory.textContent = `${monitoringValues.memory.current.toFixed(1)}GB / 16GB`;
+                }
+            }
+
+            // Network Animation
+            if (elements.network) {
+                const upDiff = monitoringValues.networkUp.target - monitoringValues.networkUp.current;
+                const downDiff = monitoringValues.networkDown.target - monitoringValues.networkDown.current;
+                
+                if (Math.abs(upDiff) > 0.1 || Math.abs(downDiff) > 0.01) {
+                    monitoringValues.networkUp.current += upDiff * 0.02;
+                    monitoringValues.networkDown.current += downDiff * 0.02;
+                    elements.network.textContent = `↑ ${monitoringValues.networkUp.current.toFixed(0)} KB/s ↓ ${monitoringValues.networkDown.current.toFixed(1)} MB/s`;
+                }
+            }
+
+            // Disk I/O Animation
+            if (elements.disk) {
+                const diskDiff = monitoringValues.diskIO.target - monitoringValues.diskIO.current;
+                if (Math.abs(diskDiff) > 0.1) {
+                    monitoringValues.diskIO.current += diskDiff * 0.02;
+                    elements.disk.textContent = `${monitoringValues.diskIO.current.toFixed(0)} MB/s`;
+                }
+            }
+
+            requestAnimationFrame(updateValues);
+        }
+
+        // Start animation loop
+        updateValues();
+
+        // Cleanup function (optional - call this if you need to stop animations)
+        return () => {
+            clearInterval(targetUpdateInterval);
+        };
     }
 }
+
 
 // Add gravity-like effects to elements
 function addGravityEffects() {

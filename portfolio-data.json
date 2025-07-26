@@ -9,105 +9,131 @@
     { "href": "#contact", "label": "Contact" }
   ],
   "personal": {
-    "name": "Viraj Chikhale",
-    "subtitle": "Full Stack Developer & Digital Universe Explorer",
-    "bio": "Welcome to my digital dimension! I'm a passionate full-stack developer who transforms ideas into stellar web experiences. With expertise spanning modern frameworks, cloud technologies, and creative problem-solving, I craft solutions that are both technically robust and visually captivating."
+    "name": "Chikhale Viraj",
+    "subtitle": "Final Year AI Engineering Student & Aspiring Data Scientist",
+    "bio": "Highly motivated final year engineering student with expertise in data analysis, programming, and a passion for applying data science techniques to solve real-world problems. Currently pursuing Artificial Intelligence at Savitribai Phule Pune University with a CGPA of 9.19."
   },
   "skills": [
-    { "name": "JavaScript", "level": 95, "icon": "🟨" },
-    { "name": "React", "level": 90, "icon": "⚛️" },
-    { "name": "Node.js", "level": 88, "icon": "🟢" },
-    { "name": "Python", "level": 85, "icon": "🐍" },
-    { "name": "TypeScript", "level": 87, "icon": "🔷" },
-    { "name": "MongoDB", "level": 82, "icon": "🍃" },
-    { "name": "AWS", "level": 80, "icon": "☁️" },
-    { "name": "Docker", "level": 78, "icon": "🐳" }
+    { "name": "Python", "level": 90, "icon": "🐍" },
+    { "name": "SQL", "level": 85, "icon": "🗃️" },
+    { "name": "JavaScript", "level": 82, "icon": "🟨" },
+    { "name": "Pandas", "level": 88, "icon": "🐼" },
+    { "name": "NumPy", "level": 85, "icon": "🔢" },
+    { "name": "Scikit-learn", "level": 80, "icon": "🤖" },
+    { "name": "HTML/CSS", "level": 85, "icon": "🎨" },
+    { "name": "C++", "level": 75, "icon": "⚡" }
   ],
   "technologies": {
-    "Frontend": ["React", "Vue.js", "Angular", "Next.js", "Svelte", "TypeScript"],
-    "Backend": ["Node.js", "Python", "Express", "Django", "FastAPI", "GraphQL"],
-    "Database": ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Elasticsearch"],
-    "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Jenkins"],
-    "Mobile": ["React Native", "Flutter", "Ionic", "PWA"],
-    "Tools": ["Git", "Webpack", "Vite", "Jest", "Cypress", "Figma"]
+    "Data Science": ["Python", "Pandas", "NumPy", "Scikit-learn", "Tableau", "SQL"],
+    "Web Development": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "Ajax"],
+    "Programming": ["C++", "Python", "JavaScript", "SQL"],
+    "Tools & Platforms": ["Tableau", "Git", "Arduino", "Android Development"],
+    "Databases": ["MySQL", "PostgreSQL"],
+    "IoT & Hardware": ["Arduino", "Servo Motors", "Sensors", "3D Printing"]
   },
   "projects": [
     {
-      "title": "Quantum E-Commerce Platform",
-      "type": "Web Application",
-      "description": "A next-generation e-commerce platform with AI-powered recommendations and real-time analytics.",
-      "technologies": ["React", "Node.js", "MongoDB", "AWS", "Stripe"],
-      "demoUrl": "https://demo.example.com",
-      "githubUrl": "https://github.com/example"
-    },
-    {
-      "title": "Stellar Task Manager",
-      "type": "SaaS Platform",
-      "description": "A collaborative project management tool with advanced scheduling and team coordination features.",
-      "technologies": ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-      "demoUrl": "https://demo.example.com",
-      "githubUrl": "https://github.com/example"
-    },
-    {
-      "title": "Cosmic Data Visualizer",
+      "title": "Amazon Sales Analysis",
       "type": "Data Analytics",
-      "description": "Interactive dashboard for complex data visualization with real-time updates and custom charts.",
-      "technologies": ["D3.js", "Python", "Flask", "Redis", "WebSocket"],
+      "description": "Comprehensive Tableau report providing insights into textile sales on Amazon, featuring state-wise and category-wise profit analysis with interactive map visualizations.",
+      "technologies": ["Tableau", "Data Analysis", "SQL", "Data Visualization"],
       "demoUrl": "https://demo.example.com",
-      "githubUrl": "https://github.com/example"
+      "githubUrl": "https://github.com/virajchikhale"
+    },
+    {
+      "title": "Rubik's Cube Solver",
+      "type": "IoT Project",
+      "description": "Arduino-based intelligent robot that scans and solves Rubik's Cube using A* algorithm, featuring servo motors, computer vision, and Android app integration with 3D-printed components.",
+      "technologies": ["Arduino", "C++", "A* Algorithm", "Android", "3D Printing"],
+      "demoUrl": "https://demo.example.com",
+      "githubUrl": "https://github.com/virajchikhale"
+    },
+    {
+      "title": "AI Tic Tac Toe Game",
+      "type": "IoT + AI",
+      "description": "Hardware-based AI game using Arduino, MiniMax algorithm, and touchscreen display with real-time decision making, sensor inputs, and interactive GUI.",
+      "technologies": ["Arduino", "MiniMax Algorithm", "C++", "Touchscreen", "AI"],
+      "demoUrl": "https://demo.example.com",
+      "githubUrl": "https://github.com/virajchikhale"
+    },
+    {
+      "title": "Gram Panchayat Web App",
+      "type": "Full Stack Application",
+      "description": "Complete web application for local government management with user authentication, data management, and administrative features.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
+      "demoUrl": "https://demo.example.com",
+      "githubUrl": "https://github.com/virajchikhale"
     }
   ],
   "services": [
     {
+      "icon": "📊",
+      "title": "Data Analysis & Visualization",
+      "description": "Expert data analysis using Python, Pandas, and Tableau to extract insights and create compelling visualizations."
+    },
+    {
+      "icon": "🤖",
+      "title": "Machine Learning Solutions",
+      "description": "Developing ML models using Scikit-learn and Python for predictive analytics and intelligent automation."
+    },
+    {
       "icon": "💻",
       "title": "Full Stack Development",
-      "description": "End-to-end web application development with modern technologies and best practices."
+      "description": "End-to-end web application development using modern technologies and best practices."
     },
     {
-      "icon": "🎨",
-      "title": "UI/UX Design",
-      "description": "Creating intuitive and visually appealing user interfaces that enhance user experience."
-    },
-    {
-      "icon": "☁️",
-      "title": "Cloud Solutions",
-      "description": "Scalable cloud architecture design and implementation for optimal performance."
-    },
-    {
-      "icon": "📱",
-      "title": "Mobile Development",
-      "description": "Cross-platform mobile applications with native performance and modern features."
+      "icon": "🔧",
+      "title": "IoT Development",
+      "description": "Arduino-based IoT solutions with sensor integration, hardware programming, and mobile app connectivity."
     }
   ],
   "experience": [
     {
-      "company": "Cosmic Web Solutions",
-      "position": "Senior Full Stack Developer",
-      "location": "Digital Universe",
-      "startDate": "2023",
-      "endDate": "Present",
-      "description": "Leading development of next-generation web applications with cutting-edge technologies.",
+      "company": "ZCOER",
+      "position": "Data Analytics Intern",
+      "location": "Pune, India",
+      "startDate": "Jan 2024",
+      "endDate": "Apr 2024",
+      "description": "Gained comprehensive experience with Tableau development and data visualization techniques.",
       "achievements": [
-        "Architected scalable microservices handling 10M+ requests daily",
-        "Reduced application load time by 60% through optimization",
-        "Led team of 5 developers on mission-critical projects"
+        "Mastered Tableau including data cleaning and preprocessing",
+        "Created interactive dashboards and data visualization sheets",
+        "Worked with complex datasets to extract meaningful insights"
       ]
     },
     {
-      "company": "StarTech Industries",
-      "position": "Frontend Developer",
-      "location": "Tech Galaxy",
-      "startDate": "2021",
-      "endDate": "2023",
-      "description": "Specialized in creating responsive, user-friendly web interfaces.",
+      "company": "Reva Tech Software Solution",
+      "position": "Full Stack Developer Intern",
+      "location": "Manchar, India",
+      "startDate": "Jul 2022",
+      "endDate": "Jan 2023",
+      "description": "Developed complete web applications and gained industry experience in full-stack development.",
       "achievements": [
-        "Developed 15+ production web applications",
-        "Improved user engagement by 40% through UX enhancements",
-        "Implemented automated testing reducing bugs by 70%"
+        "Built comprehensive Gram Panchayat web application",
+        "Implemented user authentication and data management systems",
+        "Utilized modern web technologies including PHP, MySQL, and Ajax"
       ]
     }
   ],
+  "education": [
+    {
+      "institution": "Savitribai Phule Pune University",
+      "degree": "Bachelor of Engineering in Artificial Intelligence",
+      "period": "2022 - 2025",
+      "cgpa": "9.19"
+    },
+    {
+      "institution": "Government Polytechnic Awsari",
+      "degree": "Diploma in Information Technology",
+      "period": "2019 - 2022",
+      "percentage": "86.38%"
+    }
+  ],
   "contact": {
+    "email": "chikhaleviraj.work@gmail.com",
+    "phone": "+91 9766466299",
+    "github": "https://github.com/virajchikhale",
+    "linkedin": "https://www.linkedin.com/in/viraj-chikhale-024a92201/",
     "form_fields": [
       { "name": "name", "label": "Name", "type": "text", "required": true },
       { "name": "email", "label": "Email", "type": "email", "required": true },
