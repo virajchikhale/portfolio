@@ -364,7 +364,7 @@ function initializeAnimations() {
     // Initialize particle cursor
     initializeParticleCursor();
     setTimeout(initializeTerminal, 1000);
-    setTimeout(enhanceContactTerminal, 2000);
+    setTimeout(enhanceContactTerminal, 1000);
 }
 
 // Enhanced terminal animation in app-improved.js
@@ -392,8 +392,8 @@ function initializeTerminal() {
             output: [
                 'total 256',
                 'drwxr-xr-x  8 viraj-chikhale staff   256 Jul 26 13:23 .',
-                'drwxr-xr-x  3 viraj-chikhale staff    96 Jul 26 13:23 ..',
-                '-rw-r--r--  1 viraj-chikhale staff  2048 Jul 26 13:23 .gitignore',
+                // 'drwxr-xr-x  3 viraj-chikhale staff    96 Jul 26 13:23 ..',
+                // '-rw-r--r--  1 viraj-chikhale staff  2048 Jul 26 13:23 .gitignore',
                 // '-rw-r--r--  1 viraj-chikhale staff  4096 Jul 26 13:23 README.md',
                 // 'drwxr-xr-x  5 viraj-chikhale staff   160 Jul 26 13:23 src/',
                 // 'drwxr-xr-x  3 viraj-chikhale staff    96 Jul 26 13:23 assets/',
